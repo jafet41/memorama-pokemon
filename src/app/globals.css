@@ -52,7 +52,7 @@ body {
 
 .container {
   width: 320px;
-  height: 530px;
+  height: 500px;
   position: absolute;
   transform: translate(-50%, -35%);
   top: 50%;
@@ -135,7 +135,7 @@ body {
   font-size: 12px;
   letter-spacing: 0.4px;
   font-weight: 600;
-  width: ;
+
 }
 .types span {
   padding: 5px 20px;
@@ -143,9 +143,10 @@ body {
   color: #ffffff;
 }
 .stats {
+  padding: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-between;
   text-align: center;
 }
 .stats p {

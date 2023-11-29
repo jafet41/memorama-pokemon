@@ -15,9 +15,9 @@ export default function Card({  hp,         imgSrc,         pokeName,
                                       ${themeColor} 36%, 
                                       #ffffff 36%)`        }}
                 >
-                    <p className=" hp bg-white">
-                    <span>HP </span>
-                        {hp}
+                    <p className="hp bg-white">
+                        <span>HP </span>
+                            {hp}
                     </p>
                     <img src={imgSrc} />
                     <h2 className=" poke-name">{pokeName}</h2>
