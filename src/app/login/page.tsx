@@ -4,8 +4,7 @@ import React, {useEffect} from "react";
 import {useRouter} from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-
-
+import Image from 'next/image';
 
 
 
@@ -45,8 +44,26 @@ export default function LoginPage() {
 
     return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <h1>{loading ? "Processing" : "Login"}</h1>
+        <div className="flex items-center justify-center">
+            <Image
+                src="https://elinux.org/images/c/cb/Raspberry_Pi_Logo.svg" 
+                alt="pokemon logo"
+                objectFit="contain"
+                width={100} 
+                height={150} 
+            ></Image>
+        </div>
+        <hr
+        className="my-6 border-t-2 border-white" />
+        
+        <h1
+        className="text-2xl font-bold">{loading ? "Processing" : "Login"}</h1>
         <hr />
+        <div>
+            { loading ? 
+                ( <div className="loader"></div> ) : 
+                ( <p> Ingresa Tus Datos Para Iniciar</p> ) }
+        </div>
         
         <label htmlFor="email">email</label>
         <input 

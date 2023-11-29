@@ -46,21 +46,33 @@ body {
 @keyframes l3 {to{transform: rotate(1turn)}}
 
 
-
+/*------------------------------------------------------------
+--------------------------------------------------------------
+------------------------------------------------------------*/
 
 .container {
-  width: 350px;
+  width: 320px;
+  height: 530px;
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -35%);
   top: 50%;
   left: 50%;
+  perspective: 1000px;
+}
+
+.container:hover > #card {
+  cursor: pointer;
+  transform: rotateY(180deg);
 }
 #card {
   position: relative;
   width: 100%;
+  height: 100%;
   padding: 30px 20px;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
+  border-radius: 20px;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
 }
 #card img {
   display: block;
@@ -69,6 +81,37 @@ body {
   position: relative;
   margin: 20px auto;
 }
+
+.back,
+.front {
+  height: 53vh;
+  width: 17vw;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+
+}
+
+.front {
+  background-color: whitesmoke;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  backface-visibility: hidden;
+}
+
+.back {
+  background-color: #ffffff;
+  backface-visibility: hidden;
+}
+
+/*------------------------------------------------------------
+--------------------------------------------------------------
+------------------------------------------------------------*/
+
 .hp {
   width: 80px;
   background-color: #ffffff;
@@ -92,6 +135,7 @@ body {
   font-size: 12px;
   letter-spacing: 0.4px;
   font-weight: 600;
+  width: ;
 }
 .types span {
   padding: 5px 20px;
